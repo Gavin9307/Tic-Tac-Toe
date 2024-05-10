@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #780206, #061161);
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+p {
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    text-align: center;
+    font-size: 1em;
+}
+
+.game-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95%;
+    max-width: 20rem;
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5 {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3, .box6 {
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8 {
+    border-right: 2px solid white;
+}
+
+.btn {
+    display: none;
+    position: absolute;
+    bottom: 2rem;
+    transform: translateY(-50%);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    cursor: pointer;
+}
+
+.btn.active {
+    display:block;
+}
+
+.box.win {
+    background-color: green;
+}
+
+@media only screen and (max-width: 767px) {
+    p {
+        padding: 0.5rem 1rem;
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9em;
+    }
+}
