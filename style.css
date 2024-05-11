@@ -99,4 +99,10 @@ p {
         padding: 0.5rem 1rem;
         font-size: 0.9em;
     }
+    p {
+        top: 4rem;
+    }
+    .btn {
+        bottom: 3.5rem;
+    }
 }
